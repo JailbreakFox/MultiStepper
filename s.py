@@ -17,7 +17,7 @@ def handle_client(sock,addr): #Ò»¸ö×Óº¯Êı£¬×÷Îª»Øµ÷º¯Êı£¬ÔÚÖ÷º¯ÊıÔËĞĞµÄÏß³ÌÖĞ±»µ
 	sock.send(b'[*]recieved')
 	print("recieved %s" % data) #´òÓ¡µÃµ½µÄÄÚÈİ
 	
-	if data==1:
+	if data=='1':
 		wiringpi.wiringPiSetupGpio()
 		while True:
 			wiringpi.pinMode(24,1)  
