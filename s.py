@@ -19,9 +19,10 @@ def handle_client(sock,addr): #Ò»¸ö×Óº¯Êý£¬×÷Îª»Øµ÷º¯Êý£¬ÔÚÖ÷º¯ÊýÔËÐÐµÄÏß³ÌÖÐ±»µ
 	
 	if data=='1':
 		wiringpi.wiringPiSetupGpio()
-		while True:
-			wiringpi.pinMode(24,1)  
-			wiringpi.digitalWrite(24,1)
+		wiringpi.pinMode(24,1)  
+		wiringpi.digitalWrite(24,1)
+		wiringpi.pinMode(25,1)  
+		wiringpi.digitalWrite(25,0)
 
 		
 while True:
