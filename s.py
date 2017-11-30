@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import socket
 import threading  #Ïß³ÌÄ£¿é
-import wiringPi
+import wiringpi
 
 bind_ip='0.0.0.0'
 bind_port=6667
@@ -17,7 +17,7 @@ def handle_client(sock,addr): #Ò»¸ö×Óº¯Êı£¬×÷Îª»Øµ÷º¯Êı£¬ÔÚÖ÷º¯ÊıÔËĞĞµÄÏß³ÌÖĞ±»µ
 	sock.send(b'[*]recieved')
 	print("recieved %s" % data) #´òÓ¡µÃµ½µÄÄÚÈİ
 	
-	if data=1:
+	if data==1:
 		wiringpi.wiringPiSetupGpio()  
 		wiringpi.pinMode(25,1)  
 		wiringpi.digitalWrite(25,1)
