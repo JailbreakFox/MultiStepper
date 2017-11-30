@@ -18,11 +18,13 @@ def handle_client(sock,addr): #Ò»¸ö×Óº¯Êı£¬×÷Îª»Øµ÷º¯Êı£¬ÔÚÖ÷º¯ÊıÔËĞĞµÄÏß³ÌÖĞ±»µ
 	print("recieved %s" % data) #´òÓ¡µÃµ½µÄÄÚÈİ
 	
 	if data==1:
-		wiringpi.wiringPiSetupGpio()  
+		wiringpi.wiringPiSetupGpio()
 		wiringpi.pinMode(25,1)  
 		wiringpi.digitalWrite(25,1)
 		wiringpi.pinMode(24,1)  
 		wiringpi.digitalWrite(24,0)
+	while True:
+		pass
 		
 while True:
 	client,addr=server.accept() #µ±³É¹¦ÓëÄ³Ò»¿Í»§¶ËÁ¬½Ó£¬½«Æäsocket±£´æÖÁclient±äÁ¿£¬ÏêÏ¸ĞÅÏ¢±£´æÖÁaddr
